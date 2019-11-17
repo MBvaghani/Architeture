@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="Css\Style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	
+
+	<script type="text/javascript">
+
+		
+		function validation()
+		{ 
+
+
+		checkemail();
+		
+		checkphno();
+
+			var password=document.frm.pwd.value;  
+			var cpassword=document.frm.cpwd.value; 
+
+			if(password==cpassword)
+			{  
+				return true;
+
+			}
+
+			else
+			{  
+				alert("Check Password Again!");  
+				return false;  
+			}  	
+
+		function checkemail(){
+
+			var uemail=document.frm.email.value; 
+
+				var ia =uemail.indexOf("@");
+				var lia =uemail.lastIndexOf("@");
+				var idot = uemail.indexOf(".");
+				var l= uemail.length-1;
+
+			if(ia==lia && ia!=0 && idot>ia+1 &&idot!=1)
+			{
+				return true;
+			}
+			else
+			{	
+
+				alert("Please Enter Valid Email");
+				document.frm.email.focus();
+	        	return false;
+			}
+	}
+
+	function checkphno(){
+
+		var phone=document.frm.phno.value;
+
+
+		if (phone.length != 10) {
+
+				alert("please Enter Valid Phone Number");  
+				return false;  
+			}
+			else
+			{
+				return true;
+			}
+	}
+	}
+</script>  
+
+
+	</script>
+
+</head>
+<body>
+
+	<div class="registerimg">
+	
+		<dir style=" padding: 100px;">
+			<font style="font-size:45px; color: white; font-weight: bold;">Get In Touch. </font>
+		</dir>
+			
+		</div>
+
+	<div style="float: right; margin-top: -658px; height: 100vh; width: 684px;">
+
+		<div style="padding: 45px;">
+			<font style="font-size: 24px; font-weight: bold; font-family:  serif;">
+				 Register
+			</font>
+		</div>
+
+		<form method="post" name="frm"  onsubmit="return validation()">
+			
+			<table style="margin-left: 50px;">
+				
+				<tr>
+					
+					<td style="width: 50px;"><input type="text" name="name1" placeholder="Name" required style="background: transparent; border:none;border-bottom: 1px solid; height: 40px; width: 400px; border-color: gray;"></td>
+				</tr>
+
+				<tr>
+					
+					<td style="width: 50px;"><input type="email" name="email" placeholder="Email ID" required style="background: transparent; border:none;border-bottom: 1px solid; height: 40px; width: 400px; border-color: gray; margin-top: 20px;"></td>
+				</tr>
+
+				<tr>
+					
+					<td style="width: 50px;"><input type="text" name="phno" placeholder="Phone NO" required  style="background: transparent; border:none;border-bottom: 1px solid; height: 40px; width: 400px; border-color: gray; margin-top: 20px;"></td>
+				</tr>
+
+				<tr>
+					
+					<td style="width: 50px;"><input type="password" name="pwd" placeholder="Password" required style="background: transparent; border:none;border-bottom: 1px solid; height: 40px; width: 400px; border-color: gray; margin-top: 20px;"></td>
+				</tr>
+
+				<tr>
+					
+					<td style="width: 50px;"><input type="password" name="cpwd" required placeholder="Confirm Password"  style="background: transparent; border:none;border-bottom: 1px solid; height: 40px; width: 400px; border-color: gray; margin-top: 20px;"></td>
+				</tr>
+
+				<tr>
+				<td><button style="background-color: gray; height: 50px;
+				width: 100px; margin-top: 20px;">Register</button></td>
+				</tr>	
+
+
+				<tr>
+
+
+					<td>
+
+						<div style="margin-top:60px; margin-left:10%;">
+
+							<a href="#" class="fa fa-facebook"></a>
+							<a href="#" class="fa fa-twitter" style="margin-left: 30px;"></a>
+							<a href="#" class="fa fa-instagram" style="margin-left: 30px;"></a>
+
+					</td>
+
+				</tr>
+
+				<tr>
+				<td><div  style="margin-top: 30px; margin-left: 200px;"><a href="Home.html" style=" height: 50px;
+				width: 100px; color: black">Back To Home</a></div></td>
+				</tr>	
+
+		</table>
+
+		</form>
+
+	</div>
+
+</body>
+</html>
